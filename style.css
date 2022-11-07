@@ -75,6 +75,10 @@ body {
   color: orange;
 }
 
+#period2 > a:hover {
+  color: black;
+}
+
 a {
   text-decoration: none;
 }
