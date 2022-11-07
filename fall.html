@@ -11,24 +11,98 @@
     <div id="lab-entries-container">
     <div class="lab-entry">
         <h3 class="date">October 27, 2022</h3>
-        <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed in, corrupti, omnis necessitatibus quaerat eos, alias animi vero sit dignissimos adipisci. Alias ut ipsa nemo! Saepe quos ullam ipsam repudiandae.</p>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed in, corrupti, omnis necessitatibus quaerat eos, alias animi vero sit dignissimos adipisci. Alias ut ipsa nemo! Saepe quos ullam ipsam repudiandae.</p>
     </div>
     <div class="lab-entry">
         <h3 class="date">November 1, 2022</h3>
-        <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed in, corrupti, omnis necessitatibus quaerat eos, alias animi vero sit dignissimos adipisci. Alias ut ipsa nemo! Saepe quos ullam ipsam repudiandae.</p>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed in, corrupti, omnis necessitatibus quaerat eos, alias animi vero sit dignissimos adipisci. Alias ut ipsa nemo! Saepe quos ullam ipsam repudiandae. </p>
     </div>
     <div class="lab-entry">
         <h3 class="date">November 2, 2022</h3>
-        <p class="content"></p>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            <strong>Writing</strong>
+            <br><br>
+            I am working on shortening the Introduction section of the ISA writeup for the purpose of this Abstract.
+            <br><br>
+            <u>Here’s the original text.</u>
+            <br><br>
+            <i>
+            Cancer is the result of an evolutionary process [cite Nowell] and there exists a wealth of genomic data through which we
+            can better understand cancer through this evolutionary lens. More precisely, methods have been developed that have the
+            capacity to infer the evolutionary history of a tumor in the form of tumor phylogenies. Through the inference of tumor
+            histories, we can move the needle ever more slightly towards a greater understanding of cancer. One specific use case
+            for these tumor phylogenies may be to offer insights that will guide prognosis. Furthermore, in understanding the
+            acquisition and losses of mutations throughout a tumor's evolutionary history, more effective treatments may be offered.
+            For example, a commonly used approach to treat cancer is combinatorial drug therapy. While cominbatorial drug therapy is
+            oftentimes more effective than the usage of a single drug in many cases, it is within the interest of patients' safety
+            to minimize the number of drugs used as each drug carries with it its own side effects and toxicities. Tumor phylogenies
+            can help clinicians make specific decisions that can most effectly treat the cancer while simultaneously minimizing
+            toxicity.
+            <br><br>
+            In order to infer tumor phylogenies from sequencing data, many assumptions needed to be made about the underlying cancer
+            biology in order to make computation more feasible. One dominant assumption begins with the view of tumor evolution as a
+            monoclonal process, i.e. originating from a single cell. This assumption makes sense in the face of cancer biology as it
+            is suspected that the majority of cancers have monoclonal origins. As such, this assumption of monoclonal evolution has
+            largely remained intact throughout the history of the field of reconstructing tumor evolutionary histories. However, not
+            all assumptions experienced the same type of luxury. The Infinite Sites Assumption (ISA), states two primary assumptions
+            about the nature of tumor phylogenies. (1) no mutation occurs more than once (i.e. no homoplasy) and (2) once a mutation
+            is gained, it is never lost (i.e. no back mutations). Many methods have been developed that infer the evolutionary
+            history of a tumor as it conforms to the ISA [cite papers]. In accordance, methods have been designed specifically to
+            compare these tumor phylogenies [cite papers].
+            <br><br>
+            It is known that these assumptions are imperfect. However, in light of research showing the role of mutational losses in
+            a tumor's developing drug resistance, it is increasingly more important to move away from the ISA. Especially with
+            regards to breast and ovarian cancers, a back mutation of the BRCA2 gene may lead to resistance towards the commonly
+            used chemotherapy drug cisplatin [cite papers].
+            <br><br>
+            The k-Dollo model of tumor evolution relaxes the constraint of no mutational losses. The trees constructed under this
+            model better explain the true underlying biology of a tumor, but the pace of distance measures research has fallen short
+            of the advances within tumor phylogeny inference. Specifically, no existing distance measures have been designed for
+            trees constructed under the k-Dollo model. While these existing distance measures may not necessarily break when given
+            k-Dollo phylogenies as input, the output generated will likely yield poor distance measures.
+            <br><br>
+            This paper contributes a deeper analysis as to why existing distance measures that were designed to work with ISA trees
+            cannot be applied to k-Dollo phylogenies as is. After addressing demonstrating this problem, we propose a framework
+            formalized as the Generalized Matching Distance (GMD) Problem that can will resolve the problem of applying
+            ISA-dependent methods on non-ISA tumor trees.
+            </i>
+            <br><br>
+            <u>Here is the revision copy.</u>
+            <br><br>
+            <i>
+            Cancer is the result of an evolutionary process [cite Nowell]. Methods are being developed that can infer this process
+            from sequencing data in the form of tumor phylogenies. Tumor phylogenies can be applied in the prognosis of and as a
+            tool to guide cancer treatment plans. A common assumption used in the process of inferring tumor phylogenies is the
+            Infinite Sites Assumption (ISA). The ISA, states two primary assumptions about the nature of tumor phylogenies. (1) no
+            mutation occurs more than once (i.e. no homoplasy) and (2) once a mutation is gained, it is never lost (i.e. no back
+            mutations). Many methods have been developed that infer the evolutionary history of a tumor as it conforms to the ISA
+            [cite papers]. In accordance, methods have been designed specifically to compare these tumor phylogenies [cite papers].
+            In light of research showing the role of mutational losses in a tumor's developing drug resistance both via copy number
+            aberrations and true back mutations, it is increasingly more important to move away from the ISA. One such proposed
+            model that relaxes the ISA is the k-Dollo model that allows for losses of mutations. While many inference methods have
+            adopted this new model of tumor phylogenies, existing distance measures are not adequate at comparing them. Our research
+            contributes a deeper analysis as to why existing distance measures that were designed to work with ISA trees cannot be
+            applied to k-Dollo phylogenies. After demonstrating this problem, we propose a framework formalized as the Generalized
+            Matching Distance (GMD) Problem that can resolve the problem of applying ISA-dependent methods on non-ISA tumor trees.
+            </i>
+            <br><br>
+            <strong>End writing</strong>
+        </p>
+
     </div>
     <div class="lab-entry">
         <h3 class="date">November 7, 2022</h3>
-        <p class="content">
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
             Today I am continuing to work on my abstract for the BIBM poster.
         </p>
     </div>
     </div>
     <div id="math-toolbar">
+        <div draggable="true" ondragstart="drag(event)" class="math-icon">&plus;</div>
+        <div draggable="true" ondragstart="drag(event)" class="math-icon">&minus;</div>
+        <div draggable="true" ondragstart="drag(event)" class="math-icon">&times;</div>
+        <div draggable="true" ondragstart="drag(event)" class="math-icon">&divide;</div>
     </div>
+    <script src="fall.js"></script>
 </body>
 </html>
