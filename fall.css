@@ -1,0 +1,22 @@
+.lab-entry {
+    position: relative;
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+    float: left;
+}
+
+.lab-entry > .date {
+    display: inline-block;
+    width: 500px;
+    vertical-align: text-top;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.lab-entry > .content {
+    display: inline-block;
+    padding-top: 0;
+}

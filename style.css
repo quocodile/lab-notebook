@@ -69,3 +69,12 @@ body {
 .project > .description {
   padding-left: 10px;
 } 
+
+
+#period2 > a {
+  color: orange;
+}
+
+a {
+  text-decoration: none;
+}
