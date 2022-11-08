@@ -31,6 +31,7 @@
     height: 100vh;
     position: fixed;
     padding: 5px;
+    top: 0;
     right: 0;
     background-color: orange;    
 }
@@ -44,4 +45,9 @@
     text-align: center;
     line-height: 40px;
     font-weight: 200;
+}
+
+img {
+    width: 400px;
+    height: 300px;
 }
