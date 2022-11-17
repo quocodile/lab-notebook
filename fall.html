@@ -84,7 +84,7 @@
     </div>
     <div class="lab-entry">
         <h3 class="date">November 2, 2022</h3>
-        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">Accumulating all figures. (Updated November 9, 2022)</p>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">Accumulating all figures. (Updated November 17, 2022)</p>
         <strong style="display: block;">4 mutations, Variable losses</strong>
         <img src="./images/4mut_varying_losses_DEPTH_CASET.png" alt="" srcset="">
         <img src="./images/4mutations_VariableLosses_PARENT_CASET.png" alt="" srcset="">
@@ -92,6 +92,7 @@
         <img src="./images/4mutations_VariableLosses_DEPTH_DISC.png" alt="" srcset="">
         <img src="./images/4mutations_VariableLosses_PARENT_DISC.png" alt="" srcset="">
         <img src="./images/4mutations_VariableLosses_LINEAGE_DISC.png" alt="" srcset="">
+        <img src="./images/4mutations_VariableLosses_LINEAGE_PARENT-CHILD.png" alt="">
         <br><br>
         <strong style="display: block;">5 mutations, Variable losses</strong>
         <img src="./images/5mutations_VariableLosses_LINEAGE_CASET.png" alt="" srcset="">
@@ -172,7 +173,7 @@
         <br><br><br><br><br><br><br>
     </div>
     <div class="lab-entry" >
-        <h3 class="date">November 15, 2022</h3>
+        <h3 class="date">November 15, 2022 -  November 17, 2022</h3>
         <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
             Received acceptance for BIBM poster abstract. Worked on simulating trees.
             <br><br>
@@ -191,15 +192,48 @@
                 <br>
                 let L be an array.
                 <br>
-                L = Algorithm-2(A mutation tree <i>T</i>, k, current_tree <i>T'</i>)
+                Algorithm-2(current_tree <i>T'</i>= A mutation tree <i>T</i>, k, list <i>L</i>)
                 <br>
                 return L
             </code>
             <br>
             <u>Algorithm 2</u>:
             <code>
-                
+                <br>
+                If k is 0.
+                <p style="text-indent: 40px;">Add current_tree to <i>L</i></p>
+                Otherwise...
+                <br>
+                <p style="text-indent: 40px;">
+                For each node <i>q</i> in in the current_tree
+                <p style="text-indent: 80px;">If the label of <i>q</i> is not 'A-':</p>
+                <p style="text-indent: 120px;">If <i>q</i> doesn't have a child that is labeled 'A-':</p>
+                </p>
             </code>
+            <br><br>
+            <strong>Experiment</strong>
+            <br><br>
+            Continuing to conduct experiment on PARENT-CHILD distance. Now I am combining PARENT(heuristic) with PARENT-CHILD distance.
+            <br>
+            Here are the results:
+            <br>
+            Results for 4 mutations, 2 losses, PARENT, PARENT-CHILD: <strong></strong>
+            <br>
+            Results for 4 mutations, 3 losses, PARENT, PARENT-CHILD: <strong>6642/6642</strong>
+            <br>
+            Results for 4 mutations, 4 losses, PARENT, PARENT-CHILD: <strong></strong>
+            <br><br>
+            I am also combining DEPTH with PARENT-CHILD distance.
+            <br>
+            Here are the results:
+            <br>
+            Results for 4 mutations, 2 losses, DEPTH, PARENT-CHILD: <strong></strong>
+            <br>
+            Results for 4 mutations, 3 losses, DEPTH, PARENT-CHILD: <strong></strong>
+            <br>
+            Results for 4 mutations, 4 losses, DEPTH, PARENT-CHILD: <strong></strong>
+            <br><br>
+            <strong>End experiment</strong>
         </p>
     </div>
     </div>
