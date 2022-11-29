@@ -6,10 +6,137 @@
     <link rel="stylesheet" href="fall.css" media="all">
 </head>
 <body>
+    <div class="lab-entry">
+        <h3 class="date">November 22, 2022</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Revising the BIBM abstract for submission as a conference proceeding.
+            <br><br>
+            <u>What do I want to add?</u>
+            <ul>
+                <li>A figure describing the GMD process.</li>
+                <li>Add a caption to existing figures.</li>
+                <li>Add a bit more about results</li>
+                <li>Acknowledgements to Mohammed</li>
+            </ul>
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">November 23, 2022</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Worked on the abstract.
+            <br>
+            <ul>
+                <li>Added some more textual content</li>
+                <li>Enhanced the existing figures</li>
+                <li>Added more figures</li>
+                <li>Revised based off of Layla's revisions</li>
+            </ul>
+            <br>
+            I spent a few hours playing around with d3 to see if I could make 
+            visualizations in it that I could use for research. Here is a 
+            visualization that I created and ended up putting in the abstract.
+            I'm actually quite proud of it.
+            <br>
+            <img style="height: 300px; width: 600px;" 
+                 class="src" src="./images/gmd_process_d3.PNG" alt="GMD process.">
+            <br>
+            Submitted the BIBM abstract.
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">November 24, 2022</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Sketched up a layout for my BIBM poster.
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">November 25, 2022</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+           Worked some on the BIBM poster. 
+           <br><br>
+           <strong>Experiment</strong>
+           <br><br>
+           I'm evaluating 4 mutations, 3 losses, DEPTH, PCDIST
+           <br>
+           I put the results in November 15, 2022 entry.
+           <br>
+           Let's try some experiments with AD-DIST now.
+           <br>
+           Results for 4 mutations, 2 losses, LINEAGE, AD-DIST: <strong></strong>   
+           <br>
+           Results for 4 mutations, 3 losses, LINEAGE, AD-DIST:<strong></strong>   
+           <br>
+           Results for 4 mutations, 4 losses, LINEAGE, AD-DIST: <strong>240/240</strong>   
+           <br><br>
+           <strong>End experiment</strong>
+           <br><br>
+           <strong>Hours logged:</strong>. 1 
+        </p>
+    </div>
     <div id="lab-entries-container">
         <div class="lab-entry">
             <h3 class="date">November 26, 2022</h3>
             <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+	    	I've been mainly working on code for tree simulation. I think
+		I've finally gotten a version that serves my purposes well. I've
+		pushed it to github. It is in quoc_isa/nonISA_tree_simulation/
+		trying_something_new/constructing_loss_trees/main.py
+		I'm also continuing to work on my BIBM poster.
+		<br><br>
+		<strong>Hours logged:</strong> 2
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">November 27, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                I've worked primarily on my BIBM poster and recording the video
+                of me presenting it.
+		<br>
+                I'm also working on tree simulation. 
+		<br><br>
+                <strong>Simulation</strong> 
+                <br><br>
+                I've verified some of the output for the simulation code for 6 mutations, 2 losses, and the code seems to work well.
+                There may be a small chance that the code is overcounting the number of trees in the space though, I'm not quite sure. Will
+                be double checking that. If not though, then...
+                <br>
+                <strong>5 mutations, 2 losses (1 mutation lost 2 times) has been simulated.</strong>
+                <br>
+                <strong>5 mutations, 3 losses (1 mutation lost 3 times) has been simulated.</strong>
+                <br>
+                TROUBLE: There is disagreement between the space of 5,3 I've generated with this code and past code.
+                <br><br>
+                <strong>End Simulation</strong> 
+		<br><br>
+		<strong>Hours logged:</strong> 2 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">November 28, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+		I've looked into the disagreement between datasets that I saw yesterday, and I found things explaining the problem
+                so the situation doesn't look as bad as I thought. Essentially, in the generation of the original dataset, I've
+                used parent-child distance to remove duplicate trees generated by pruferSim. However, as it turns out, <strong>parent-child
+                distance is completely unusable on k-Dollo phylogenies</strong>. Consider the trees below. While they are obviously different
+                trees, the parent-child distance between them is 0. 
+                <br><br>
+                <img style="height: 150px; width: 300px" class="src" src="./images/parent_child_distance_unusable_k_dollo_proof.png" alt=""/>
+                <br><br>
+                I have to do more investigation, and it seems like the only different between the two dataset is that the original dataset 
+                is undercounting due to my usage of parent-child distance in the process. It seems, then, that the most accurate dataset
+                is the new one generated, as it doesn't undercount due to the same reason as the original dataset. I've been looking more
+                into the dataset to validate it, and the results seem promising so far. It may actually be enumerating all the trees in the 
+                space of 5 gains, 3 losses.
+                <br>
+                <br>
+                After more investigation, I found things that were pretty big. <strong>Particularly, DISC, ancestor-descendant distance, 
+                and CASet all say that the two trees below have a distance of 0</strong>, which is just wrong.
+                <br>
+                <img style="height: 200px; width: 300px" src="./images/ad_dist_caset_unusable_k_dollo_proof.png" alt="">         
+                <br><br>
+                I'm continuing with with simulations. Specifically, trying to simulate 6 gains, 2 losses. 
+		<br><br>
+		<strong>Hours logged:</strong> 5 
             </p>
         </div>
     </div>
