@@ -120,7 +120,7 @@
                 distance is completely unusable on k-Dollo phylogenies</strong>. Consider the trees below. While they are obviously different
                 trees, the parent-child distance between them is 0. 
                 <br><br>
-                <img style="height: 150px; width: 300px" class="src" src="./images/parent_child_distance_unusable_k_dollo_proof.png" alt=""/>
+                <img style="height: 150px; width: 300px" class="src" src="./images/parent_child_incorrect.png" alt=""/>
                 <br><br>
                 I have to do more investigation, and it seems like the only different between the two dataset is that the original dataset 
                 is undercounting due to my usage of parent-child distance in the process. It seems, then, that the most accurate dataset
@@ -132,11 +132,78 @@
                 After more investigation, I found things that were pretty big. <strong>Particularly, DISC, ancestor-descendant distance, 
                 and CASet all say that the two trees below have a distance of 0</strong>, which is just wrong.
                 <br>
-                <img style="height: 200px; width: 300px" src="./images/ad_dist_caset_unusable_k_dollo_proof.png" alt="">         
+                <img style="height: 200px; width: 300px" src="./images/ad_dist_caset_incorrect.png" alt="">         
                 <br><br>
                 I'm continuing with with simulations. Specifically, trying to simulate 6 gains, 2 losses. 
 		<br><br>
 		<strong>Hours logged:</strong> 5 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">November 29, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Met with Layla, talked primarily about revisions for the first draft of the BIBM 2022 poster. 
+                Also discussed some of the stuff I've been working on in terms of simulation. She wants me to 
+                write up the algorithm for generating these trees. 
+                <br>
+                I've commented more of my code, I've been working on revising the BIBM poster.
+		<br><br>
+		<strong>Hours logged:</strong> 3
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">November 30, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                I continued to revise the BIBM poster. I also spent alot of time
+                continuing with simulations. Specifically re-simulating some of the
+                trees to ensure I have the correct data as well as simulating new trees
+                with six gains, two losses. 
+		<br><br>
+		<strong>Hours logged:</strong> 3
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 1, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                I stayed up pretty late working on the BIBM poster. Primarily focused
+                on making better visualizations, which are attached below: 
+                <br>
+                <img style="width: 600px; height: 300px;" src="./images/heuristic_images.png" alt="">  
+		<br><br>
+		<strong>Hours logged:</strong> 4
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 2, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Met with Layla, continued to revise the poster.
+		<br><br>
+		<strong>Hours logged:</strong> 2 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 3, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Worked a bit by continuing to simulate 6 mutations, 2 losses.
+                Also editing code to try and make the simulation process a bit faster.
+		<br><br>
+		<strong>Hours logged:</strong> 2 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 4, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Continuing to simulate trees. Now I have the following simulated data,
+                but I am not yet 100% sure that it is the entire space of trees.
+                <ul>
+                  <li>5 mutations, 5 losses ('A' mutation lost 5 times)</li>
+                  <li>6 mutations, 4 losses ('A' mutation lost 4 times)</li>
+                  <li>6 mutations, 3 losses ('A' mutation lost 3 times)</li>
+                </ul>
+                I tried to refine some of the simulation code to make it more 
+                readable. It's now broken down into more functions.
+		<br><br>
+		<strong>Hours logged:</strong> 2 
             </p>
         </div>
     </div>
