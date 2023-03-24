@@ -7,6 +7,17 @@
 </head>
 <body>
     <div class="lab-entry">
+        <h3 class="date">Visualizations for 'Relaxing ISA' project</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        Here are all the visualizations I've made from the results I gathered for the
+        'Relaxing ISA' project during winter break. Additionally, here's a 
+        <a href="https://docs.google.com/spreadsheets/d/107jN6Z_vtRVF6IH-sQRx--QN6ATUagC8s2NdEjXfB18/edit?usp=sharing">link</a> to a 
+        CSV I created that stores all the data from the experiments I've done thus far.
+        <br>
+        
+        </p>
+    </div>
+    <div class="lab-entry">
         <h3 class="date">November 22, 2022</h3>
         <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
             Revising the BIBM abstract for submission as a conference proceeding.
@@ -62,9 +73,9 @@
            <br>
            Let's try some experiments with AD-DIST now.
            <br>
-           Results for 4 mutations, 2 losses, LINEAGE, AD-DIST: <strong></strong>   
+           Results for 4 mutations, 2 losses, LINEAGE, AD-DIST: <strong>30615/31152</strong>   
            <br>
-           Results for 4 mutations, 3 losses, LINEAGE, AD-DIST:<strong></strong>   
+           Results for 4 mutations, 3 losses, LINEAGE, AD-DIST: <strong>6612/6642</strong>   
            <br>
            Results for 4 mutations, 4 losses, LINEAGE, AD-DIST: <strong>240/240</strong>   
            <br><br>
@@ -206,6 +217,284 @@
 		<strong>Hours logged:</strong> 2 
             </p>
         </div>
+        <div class="lab-entry">
+            <h3 class="date">December 6, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                I simulated some more data, and also reviewed of of the code I wrote this summer.
+                I played around with it to see if the code could transform trees with multiple
+                mutations being lost, and it acutally seems like the code is designed to do so and
+                works fine for that use case.
+                <br>
+                I also did some thinking about how I can run experiments on real data.
+		<br><br>
+		<strong>Hours logged:</strong> 1 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 8, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Explored ways that I can run experiments on real data. 
+                Specifically skimmed through SPhyR to see what kind of real data 
+                they used, as well as brainstormed ways that I can do the same.
+		<br><br>
+		<strong>Hours logged:</strong> 0.5 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 9, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Thought some about simulating trees with multiple mutations being lost. 
+                Simulated more trees where one mutation is lost multiple times. I continued
+                to look at literature that might help me run experiments on real data. 
+                Specifically looked at how MLTED and CASet/DISC experimented on real data.
+                <br>
+                <br>
+                I created a script that allows me to add k losses of any specificied mutation.
+                I've also started to run experiments on some larger trees. 
+                <br>
+                <br>
+                My compute all matchings code seems slow. I'm looking to see if I can make it any faster.
+                <br>
+                After some reviewing of the code, the slowest part of the code is where I compute all the 
+                possible permutations of a bit vector that is n*m long, where n is number of losses in 
+                one tree and m is the number of losses in the other. This code worked, but it's now too
+                slow. I'm now working to create something faster. 
+		<br><br>
+		<strong>Hours logged:</strong> 2 hours 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 10, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                I've written a script to more efficiently compute GMD via brute force.
+                I'm now running tests to make sure that the script is correct.
+                <br><br>
+                Additionally, I'm cleaning up curie by deleting files I'm not using and
+                pushing updated code.This is part of the process of preparing my data
+                and source code for collaboration with Cecilia.
+		<br><br>
+		<strong>Hours logged:</strong> 1 hour 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 11, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Goals for the day:
+                <ul>
+                  <li>Run more experiments</li>
+                  <li>Run more tests to ensure code correct of efficient_computing_all_matchings.py</li>
+                  <li>Clean up efficient_computing_all_matchings.py</li>
+                </ul>
+                I wasn't able to run more experiments, but I was able to clean up my code and  and run more tests.
+		<br><br>
+		<strong>Hours logged:</strong> 1 hour 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 12, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Met with Layla, talked about experiments. Talked about end goal of the project. 
+                Running more experiments, cleaning code. Specifically organizing the files in the 
+                'evaluation' folder. Also simulating some data.
+		<br><br>
+		<strong>Hours logged:</strong> 4 hour 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 13, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Goals for the day:
+                <ul>
+                  <li>Make sure evaluation code works for when tree is comparing with itself.</li>
+                  <li>Run experiments</li>
+                  <ul>
+                    <li>
+                      3 losses, 3 mutations, CASET+LINEAGE, 500 random trees (repeats allowed)
+                    </li>
+                    <li>
+                      3 losses, 4 mutations, CASET+LINEAGE, 500 random trees (repeats allowed)
+                    </li>
+                    <li>
+                      3 losses, 5 mutations, CASET+LINEAGE, 500 random trees (repeats allowed)
+                    </li>
+                    <li>
+                      3 losses, 6 mutations, CASET+LINEAGE, 500 random trees (repeats allowed)
+                    </li>
+                    <li>
+                      3 losses, 7 mutations, CASET+LINEAGE, 500 random trees (repeats allowed)
+                    </li>
+                  </ul>
+                </ul>
+                Achieved: 
+                <br>
+                I was able to edit the evaluation code and enumerating matchings code
+                so that you can evaluate the heuristics when a tree is compared with itself. 
+                In terms of experiments, I was only able to get the results of "3 losses, 3 mutations, 
+                CASET+LINEAGE" cause the experiments ended taking longer than I thought. I was able to 
+                start the experiments for "3 losses, 4 mutations, CASET+LINEAGE"
+                <br>
+                I've also been making <a href="https://docs.google.com/document/d/1lZP6BSviYCdv3gE5Ji-8za4bmaktXMPdjx8A08VBMsk/edit">this document</a> that plans my experiments more detailed.
+		<br><br>
+		<strong>Hours logged: </strong> 2.5 hours 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 14, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Goals for the day:
+                <ul>
+                	<li>Look more into real data.</li>
+                	<li>
+			  <ul>
+			      <li>
+			        3 losses, 5 mutations, CASET+LINEAGE, 500 random trees (repeats allowed)
+			      </li>
+			      <li>
+			        3 losses, 6 mutations, CASET+LINEAGE, 500 random trees (repeats allowed)
+			      </li>
+			      <li>
+			        3 losses, 7 mutations, CASET+LINEAGE, 500 random trees (repeats allowed)
+			      </li>
+			  </ul>
+                        </li>
+                </ul>
+                Achieved:
+                <br>
+                So I spent a lot of time looking at real data. From what I was looking at, I noticed a few things... 
+                <ul>
+                  <li>Not many real phylogenies exist where the loss is actually labeled.</li>
+                  <li>When losses are labeled, there usually isn't more than 1 loss, making GMD useless.</li>
+                </ul>
+		<br><br>
+                However, despite the difficulty of finding trees where losses were represented in a meaningful way,
+                trees with parallel mutation might be easier to find. I will link some images here of parallel 
+                mutations that are in the tumor phylogenies.
+		<strong>Hours logged:</strong> 3.5 hours 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 15, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                I mainly ran experiments and thought about how to change the code of GMD
+                in order to handle mutation clusters.
+		<br><br>
+		<strong>Hours logged:</strong> 2
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 16, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+                Goals:
+                <ul>
+                  <li>Fix the experiments that broke yesterday.</li>
+                  <li>Run new experiments.</li>
+                  <li>Code up a new version of GMD that can handle mutation clusters.</li>
+                </ul>
+                 Achieved:
+                 <br>
+                 I was able to continue running several experiments. I also began to code up
+                 a new version of heuristicGMD that can handle mutation clusters. As of now, 
+                 the code seems to do so, but the weighting schemes still haven't been adjusted
+                 yet to accomodate mutation clusters. I'll also need to update the enumerate matchings
+                 code to handle mutation clusters. 
+                 <br>
+                 <br>
+                 Aside from that stuff, I also read more of the literature to see how I could perform
+                 experiments on real data. I ended up reading through SCARLET, SIFIT, a bit of MP3 and
+                 and a bit of SPHyR. I found trees that could be used to evaluate GMD in the supplementary
+                 material of SPHyR.
+		<br><br>
+		<strong>Hours logged:</strong> 5 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 17, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Goals:
+            <ul>
+                <li>Verifying that the code I wrote yesterday is correct.</li>
+            	<li>Update weighting schemes to handle mutation clusters.</li>
+            	<li>Update enumerate matchings to handle mutation clusters.</li>
+            	<li>More thoroughly read through SPHyR</li>
+                <li>Run more experiments.</li>
+            </ul>
+		<strong>Hours logged:</strong> 4
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 18, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Read some literature on colorectal cancer and its evolutionary nature as 
+            well as continuing to run some experiments. 
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 19, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Ran some experiments. Did more work on fixing the code to account
+            for the case of when multiple mutations are lost in enumerate matchings. 
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 20, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I had to take care of several edge comparisons in the brute force GMD code.
+            I also ran several experiments.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 3 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 21, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Ran some experiments. 
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 0.5
+            </p>
+        </div>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 22, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Created some test cases for clusterEnumerateMatchings code. The test
+            cases are pictured below. It passed all three test cases.
+            <br>
+            <img style="height:300px; width:300px; border: 1px solid black;" src="./images/testcases1_1.jpg" alt="">
+            <img style="height:300px; width:300px; border: 1px solid black;" src="./images/testcases1_2.jpg" alt="">
+            <img style="height:300px; width:300px; border: 1px solid black;" src="./images/testcases1_3.jpg" alt="">
+            <br>
+            I also ran some experiments.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 1 
+            </p>
+        </div>
+        <div class="lab-entry">
+            <h3 class="date">December 22, 2022</h3>
+            <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I am running some experiments on 5 muts, 2 loss 'A', 2 loss 'B'. This
+            is the first time I am using clustersHeuristicGMD and clusters_enumerate_matchings
+            code as part of the evaluation process. After the experiments are done, I intend
+            on verifying them to ensure correctness.
+            <br>
+            <br>
+            I briefly looked over the results of the experiments, and they looked correct.
+            Aside from that, I also commented and cleaned some code for better documentation.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 1 
+            </p>
+        </div>
+    </div>
+    </div>
     </div>
     <script src="fall.js"></script>
 </body>

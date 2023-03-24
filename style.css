@@ -27,7 +27,7 @@ body {
   width: 615px;
 }
 
-#content-container > div{
+#content-container > a > div{
   width: 200px;
   height: 200px; 
   line-height: 200px;

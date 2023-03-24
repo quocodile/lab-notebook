@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="fall.css" media="all">
+</head>
+<body>
+    <div class="lab-entry">
+        <h3 class="date">January 4 - January 12</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        Spent a lot of time working on the CS Tea presentation.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> Several 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">January 17</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        Met with Kiran and Cathy. Talked about research and things.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 1 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">January 17</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        Writing out the algorithm for enumerating trees.
+        <br>
+        <br>
+        <div class="algorithms" style="display: flex;">
+        <div style="border: 1px solid black; padding: 5px;">
+        <b>Required:</b> 
+        <br>
+                  All ISA trees T possible from a given mutation set M.
+        <br>
+                  A number k representing how many losses you want inserted          
+        <br>
+                  A mutation m- to lose.
+        <br>
+        <br>
+        <b>Output:</b> All possible trees with mutation set M and k losses of m-
+        <br>
+        <br>
+        <b>Algorithm 1:</b>
+        <br>
+        <br>
+        <ol>
+                <li>Create a list B</li>
+        	<li>For each tree t in the set of T</li>
+        	<li><span style="margin-left: 15px;">Get all valid trees S where k m- mutations are inserted into t (Algorithm 2)</span></li>
+        	<li><span style="margin-left: 15px;">Add all trees from S into B</span></li>
+        	<li> Return B</li>
+        </ol>
+        </div>
+        <div style="border: 1px solid black; padding: 5px;">
+        <b>Required:</b> 
+        <br>A number k of mutations to lose.
+        <br>A Newick string representing a tree t.
+        <br>A mutation m- that is being lost.
+        <br>A list L of valid trees.
+        <br>
+        <br>
+        
+        <b>Output:</b> N/A
+        <br>
+        
+        <b>Algorithm 2:</b>
+        <br>
+        
+        <ol>
+                <li>If k is 0, add t to L if it's not already.</li>
+        	<li>Otherwise...</li>
+        	<li><span style="margin-left: 15px;">Get the nodes N of t</span></li>
+        	<li><span style="margin-left: 15px;">For node n in N</span></li>
+        	<li><span style="margin-left: 30px;">If the node n is a valid node...</span></li>
+        	<li><span style="margin-left: 45px;">Insert a loss of mutation m- to the node n such that m- has no children></li>
+        	<li><span style="margin-left: 45px;">Call Algorithm 2 with parameters...
+                  <ul><span style="margin-left: 30px;">k-1 mutations to lose</span></ul>
+                  <ul><span style="margin-left: 30px;">A new Newick string P* representing m- inserted onto node n</span></ul>
+                  <ul><span style="margin-left: 30px;">A mutation m- that is being lost</span></ul>
+                  <ul><span style="margin-left: 30px;">A list L of valid trees</span></ul>
+                </span></li>
+        	<li><span style="margin-left: 30px;">For each child c of n<span></li>
+        	<li><span style="margin-left: 45px;">Insert a loss of mutation m- to the node n such that c is the child of m-></li>
+        	<li><span style="margin-left: 45px;">Call Algorithm 2 with parameters...
+                  <ul><span style="margin-left: 45px;">k-1 mutations to lose</span></ul>
+                  <ul><span style="margin-left: 45px;">A new Newick string P* representing m- inserted onto node n</span></ul>
+                  <ul><span style="margin-left: 45px;">A mutation m- that is being lost</span></ul>
+                  <ul><span style="margin-left: 45px;">A list L of valid trees</span></ul>
+        </ol>
+        </div>
+        </div>
+        
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">January 21</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            What needs to be done in terms of improving my write-up?
+            <ul>
+            	<li>Insert the new data and visualizations in there.</li>
+            	<li>Insert the algorithm for k-dollo phylogeny enumeration</li>
+            	<li>Update the results section</li>
+            </ul>
+            <br>
+            I ended up fixing some visualizations and creating new ones for the data.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 1 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">January 22</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            What needs to be done in terms of improving my write-up?
+            <ul>
+            	<li>Insert the new data and visualizations in there.</li>
+            	<li>Insert the algorithm for k-dollo phylogeny enumeration</li>
+            	<li>Update the results section</li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            I ended up pulling an all nighter.
+	    <strong>Hours logged:</strong> Many 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">January 30</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Fixed the graphs in order to make a grouped bar chart for the data.
+            Translating some of the real data into DOT format.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 3 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">January 31</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Met with Layla to discuss writeup. We plan to submit to ACM BCB. 
+            I also read a bit on experimental design of CASet and DISC paper 
+            in the case of real data.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">February 9</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Met with Layla.<br>Heres my to-do list for the week.
+            <ul>
+            	<li>Rewrite the contributions to consider what has been done and what will be done</li>
+            	<li>Run experiments on real data</li>
+            	<li>Run experiments on simulated data</li>
+            </ul>
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">February 14</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Met with Layla. Here's the plan for the upcoming week.
+            <ul>
+            	<li>Small, targeted simulated experiment that mimics the real data</li>
+            	<li>Simulation with trees with multiple gains</li>
+            	<li>Something with trees with gains compared to trees with losses</li>
+            </ul>
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">February 20</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Creating a simulation algorithm for multiple gains. 
+            <br>
+            <br>
+            What are the constraints placed on a tree with multiple gains (no losses)?
+            <ul>
+            	<li>You can't have two gains of same mutation on the same lineage</li>
+            	<li>You can't have the same two gains as siblings</li>
+            </ul>
+            <br>
+            In reviewing my algorithm for enumerating trees, there's a likely chance that I'm overcounting
+            as I didn't account for the case when two different base trees can end up having the same tree
+            once you add gains/losses. Not sure if this was a problem for losses, but it does seem to be a problem
+            for gains.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 1 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">February 22</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Modified the code slightly to prevent duplicate trees. From some tests, it
+            seem that loss trees weren't affected by the duplicate tree bug.
+            <br>
+            I'm now aiming to simulate some trees with gains. What trees specifically?
+            <ul>
+            	<li>5 mutations, 3 gains</li>
+            	<li>5 mutations, 2 gains</li>
+            	<li><strike>6 mutations, 3 gains</strike></li>
+            	<li><strike>6 mutations, 2 gains</strike></li>
+            	<li>7 mutations, 3 gains</li>
+            	<li>7 mutations, 2 gains</li>
+            </ul>
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">March 1</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I installed mp3treesim on my chromebook. I ran MP3 on the 
+            FiMo, SCARLET, and SiCloneFit CRC2 trees. I'm also running experiments
+            for trees with gains.  
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 4
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">March 9</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I worked on a to-do list for spring break work.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 
+        </p>
+    </div>
+    <script src="fall.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="fall.css" media="all">
+</head>
+<body>
+    <style>
+      table tr td {
+        border: 1px solid black;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        padding: 0;
+      }
+      h4 {
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        text-decoration: underline;
+      }
+      td > p {
+        position: absolute;
+        top: 10px;
+        padding: 5px;
+      }
+    </style>
+    <h1>Spring Break 2023</h1>
+    <table>
+        <tr>
+        	<th>Sunday</th>
+        	<th>Monday</th>
+        	<th>Tuesday</th>
+        	<th>Wednesday</th>
+        	<th>Thursday</th>
+        	<th>Friday</th>
+        	<th>Saturday</th>
+        </tr>
+    	<tr>
+    	  <td></td>
+    	  <td></td>
+    	  <td></td>
+    	  <td></td>
+    	  <td>
+            <h4>March 16</h4>
+            <p>
+              Go through the code to make sure I understand it.
+              <br>
+              <br>
+              Focus on documentation and preparing code for preparation of publishing it.
+              <br>
+              <br>
+              Run more experiments that mimic the real data comparison for CRC2. 
+            </p>
+          </td>
+    	  <td>
+            <h4>March 17</h4>
+            <p>
+              Focus on documentation and preparing code for preparation of publishing it.
+              <br>
+              <br>
+              Begin drafting up a draft of ACM BCB.
+              <br>
+              <br>
+              Run more experiments that mimic the real data comparison for CRC2. 
+            </p>
+          </td>
+    	  <td></td>
+    	</tr>
+    	<tr>
+    	  <td></td>
+    	  <td>
+            <h4>March 20</h4>
+            <p>
+              Run more experiments on trees with mutation clusters. 
+              <br>
+              <br>
+              Create an algorithm for simulating (not enumerating) trees with mutation clusters. 
+              <br>
+              <br>
+              Focus on documentation and preparing code for preparation of publishing it.
+            </p>
+          </td>
+          </td>
+    	  <td>
+            <h4>March 21</h4>
+            <p>
+              Continue on draft of ACM BCB. 
+              <br>
+              <br>
+              Flesh out the details about trees that ISA distance measures aren't effective at comparing.
+            </p>
+          </td>
+    	  <td><h4>March 22</h4></td>
+    	  <td><h4>March 23</h4></td>
+    	  <td><h4>March 24</h4></td>
+    	  <td></td>
+    	</tr>
+    </table>
+    <div class="lab-entry">
+        <h3 class="date">March 19</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        Writing code for clusters. So far, the code is only written for trees with gains. <br> Nothing to check if a tree is valid when clustered and losses are involved. <br> Reviewing the trees simulated to ensure it's correct. Simulating trees with gains.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">March 20</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        I want to run experiments that compare trees with losses with trees with trees with parallel mutations. 
+        <br> Specifically, I want to ask the question of whether CASet+GMD will yield lower distances than CASet.
+        <br> I also want to look more into the real data trees CRC1 and CRC2 to make my own intuitive comparisons
+        <br> between them. Another thing I want to look into is whether two trees with similar mutation sets but
+        <br> vastly different heights will be punished heavily by MP3.
+        <br> 
+        <br> After some more investigating, I'm wonder if it is the case that MP3 is bad at handling mutatioon clusters.
+        <br> After looking at an experiment done in the MP3 paper, it seems that MP3 more severely punishes variances in 
+        <br> tree depth. While punishing differences in tree depth seems to be an essential property of a distance measure
+        <br> for comparing clonal trees, there remains to be said how severely the punishment should be. One side effect
+        <br> of harshly punishing these types of trees is that when two trees have similar mutation sets but one is more clustered,
+        <br> that tree is inherently going to be shorter, which may lead to a very severe difference between the two trees. This might
+        <br> lead to evaluations that ignore the fact that trees at different resolutions could encode the same time of information. 
+        <br>
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2 
+        </p>
+    </div>
+    <script src="fall.js"></script>
+</body>
+</html>
