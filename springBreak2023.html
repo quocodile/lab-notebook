@@ -135,6 +135,61 @@
 	    <strong>Hours logged:</strong> 2 
         </p>
     </div>
+    <div class="lab-entry">
+        <h3 class="date">March 21-24</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I've been spending time running experiments and working on an initial draft for the ACM BCB paper submission. The data from the experiments I've conducted can be found at the link below:
+            <br>
+            <br>
+<a href="https://docs.google.com/document/d/1lZP6BSviYCdv3gE5Ji-8za4bmaktXMPdjx8A08VBMsk/edit?usp=sharing" target="blank">Link to experiments</a>
+            <br>
+            <br>
+The draft/outline of the ACM BCB paper can be found at the following link:
+            <br>
+            <br>
+<a href="https://docs.google.com/document/d/1HevnFgUNXNZ_g72H7C8aj0Y3WmAqm3MARwareOXVLKA/edit?usp=sharing" target="blank">Link to draft/outline</a>
+            <br>
+            <br>
+Over the week, the interesting results that I've gotten from the simulated experiments show that...
+            <ul>
+            	<li>MLTED issues are resolved by the GMD framework</li>
+            	<li>CASet and DISC (union) show patterns (See graph below) similar to MP3</li>
+            	<li>CASet and DISC (intersection) don't seem to be effective at comparing tumor trees with different amounts of gains</li>
+            </ul>
+              <figure>
+                <img style="display: inline-block; background-color: orange; width:300px; height: 360px;" src="images/comparingMethods.png" alt="">
+                <figcaption style="font-size:11px;">Comparing trees in 8mutations, 1 gain of A to 8 mutations with 1,2,3,4 gains of A</figcaption>
+              </figure>
+            <br> 
+            Compare this to a graph shown in the MP3 paper.
+              <figure>
+                <img style="display: inline-block; background-color: orange; width:300px; height: 360px;" src="images/mp3-experiment_1.png" alt="">
+                <figcaption style="font-size:11px;">Refer to paper for description</figcaption>
+              </figure>
+            <br>
+            To help me interpret some of the results, I also did more rereading of varying papers that discuss tumor distance measures. In particular, I learned from the CASet/DISC paper that their intersection variant de-emphasizes different in mutation sets, whereas the union variant should be used when a difference in mutation set should be emphasized. Another thing to note is that it seems the case that differences at the leaves don't seem to strongly affect the distance evaluation of CASet and DISC. This might be problematic as when you have multiple gains/multiple losses, due to various constraints, these gains and losses might be pushed lower in the tree. 
+           <br>
+           In working with the distance measures, I also notice that MP3 punishes differences in trees pretty severely, with a steeper curve than both CASet and DISC.
+            <br>
+            When thinking about MLTED, the experiments I ran show that using GMD, we can take MLTED from a point of being unusable on non-ISA trees to being usable again. These are the example trees I tested on when running an experiment to show this:
+            <br>
+            <br>
+            <img style="height:360px; width:800px;" src="images/mlted_experiment.PNG" alt="">
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> lots... 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">March 24-25</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        I encountered a flaw in the enumeration code, so I spent time fixing it.
+        Now I have to consider if I should rerun my experiments. I will consult with Layla.
+            <br>
+            <br>
+	    <strong>Hours logged:</strong> 2 
+        </p>
+    </div>
     <script src="fall.js"></script>
 </body>
 </html>
