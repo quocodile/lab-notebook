@@ -215,6 +215,144 @@
 	    <strong>Hours logged: </strong> 10:30am - 5:00pm 
         </p>
     </div>
+    <div class="lab-entry">
+        <h3 class="date">June 28</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Attended the Computational Suite weekly wednesday meet, talked to
+            other research students. I then worked with Thea to clean up the Observable
+            a bit. Afterwards, we then watched a video of John Alexis Guerra-Gomez in 
+            which he discussed visualizing network data when there is a lot of nodes and edges.
+            He seems like quite a character. Thea and I then brainstormed experiments that 
+            we conduct with various audiences of our tool in order to evaluate the efficacy
+            of our tool:
+            <ul>
+            	<li>
+                  For the tumor distance researchers, give them two trees and a distance measure and ask them
+                  to point out differences between the tree and what aspects might be contributing to the distance.
+                  Then ask them to conduct the same task but with the assistance of the visualization tool.
+                </li>
+                <li>
+                  For the tumor inference methods researchers, give them a variety of trees generated from a single method
+                  and compare them to the ground truth tree. Ask them to explore and make discoveries.
+                </li>
+                <li>
+                  For the cancer biologists who are more concerned with data than methods, 
+                  ask the to rank the distance measures without the visualization tool. Then 
+                  ask them to conduct the same task but with the help of the visualization tool.
+                </li>
+            </ul>
+
+            <br>
+            <br>
+            Aside from that, we also worked to create a way to more easily parse newick strings in the Observable.
+            After a few failed attempts, I ended up finding some observable code that performed a parsing of the newick strings.
+            <br>
+            <br>
+	    <strong>Hours logged: </strong> 10:30am - 4:00pm, 6:00pm - 8:00pm 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">June 29</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I used the following command to help convert clusters with { to space delimited clusters.
+            <br>
+            <br>
+            sed '/{*}/ s/,//g' &lt;filename&gt;
+            <br>
+            <br>
+            Eric wants us to refactor api.py into app.py, so we'll try to get that done this week.
+            I collaborated with Thea to make the <a href="https://observablehq.com/d/5a5928a7eb1e57bd">Observable</a>
+            better by adding in more real data, writing code for parsing the newick strings and getting the appropriate 
+            data from them (mutations, ad pairs, pc pairs), and tuning the radio buttons to easily change which trees we
+            are comparing. We then presented this stuff at the lab meeting to Eric, Jake, and Ethan. We then attended the tea
+            talk that Anna Rafferty gave about using applied machine learning in educational assessments. Following the talk,
+            we continued to make the observable better by applying modularity to the tripartite graphs as well. We then spent
+            time making inferences and comparing the heatmap and tripartite approaches. I then read a paper on design studies
+            written by Tamara Munzner. 
+            <br>
+            <br>
+	    <strong>Hours logged: </strong> 9:30am - 6:00pm, 10:00pm - 11:00pm
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">June 30</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Reviewed and iterated upon the user stories and requirements. Refactored api.py and app.py into
+            a combined file called combined_app_api.py. Contacted Eric about testing it, but doesn't seem to
+            work, so we'll have to continue debugging that.  
+
+            Worked with Thea on designing a version of the heatmap/tripartite graph for CASet and DISC. 
+            Turns out, it is harder than we think, so after a couple hours of brainstorming, we couldn't
+            come up with anything brilliant. We went home to let the ideas ruminate. That being that, Thea
+            did mention turning CASet into something more similar to ancestor-descendant in that we should 
+            somehow consider pairs of nodes as edges rather than totally using the idea of sets that CASet uses. 
+
+            I then worked on creating a Newick parser to more better accommodate the data that we might receive
+            from users. It turned out to be easier than I thought.
+            <br>
+            <br>
+	    <strong>Hours logged: </strong> 11:00am - 3:30pm, 5pm - 7:30pm, 10:00pm - 12:30am
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">July 1</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I completed and debugged the Newick parser. The code is linked <a href="">here</a>.
+            I then used the output of this to visualize the individual mutation contributions, visualizations
+            which are stored in our observable notebook, linked <a href="">here</a>. I had to write additional code
+            to connect the two, and that took a bit longer than I would have liked, but was able to complete it. I 
+            will check for correctness and analyze it with Thea on Monday.
+            <br>
+            <br>
+	    <strong>Hours logged: </strong> 12:30pm - 2:30pm 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">Week 2 Status Report</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        Questions:
+        <ol>
+        	<li>What did I hope to accomplish?</li>
+        	<li>What did I actually accomplish</li>
+        	<li>Why are (1) and (3) different?</li>
+        	<li>What is my plan for next week??</li>
+        	<li>What did I read this week?</li>
+        	<li>Questions?</li>
+        </ol>
+        Answers:
+        <ol>
+        	<li>
+			<ul>
+				<li>Translate more real data trees from papers.</li>
+				<li>Better organize the files in the github repo.</li>
+				<li>Better understand the goals for this summer.</li>
+				<li>Better understand the audience and tasks required of this visualization tool</li>
+				<li>Design an experiment to evaluate our visualization tool</li>
+				<li>Define the task abstractions for our visualization tool and find papers that reinforce the validity of each visual encoding</li>
+				<li>Start filling in the GitHub Issues list</li>
+			</ul>
+                </li>
+                <br>
+        	<li>
+			<ul>
+				<li>Enhanced the Observable by automating many tasks.</li>
+				<li>Analyzed the heatmap and tripartite visualization for conveying individual mutation contributions</li>
+				<li>Created and interated upon user stories and requirements</li>
+				<li>Brainstormed experiments to evaluate the tool for a variety of audiences.</li>
+				<li>Better organized the files in the github repo, focusing mainly on the organization of our real data.</li>
+			</ul>
+                </li>
+                <br>
+        	<li>What I accomlished versus what I hoped to accomplish differ because I decided that some things took precedent over (and were more exciting to work on than) others. Specifically, the goal of deciding on how to classify the abstract tasks required of our tool wasn't immediately necessary. Rather, what needed to be focused on what preparing for meeting with Mohammed, Layla's collaborator. As such, we needed to make sure that we had things to review. In addition to polishing out our tool, we also wanted our heatmap and tripartite visualizations, as well as the user stories to be reviewed. As such, we focused primarily on that stuff.</li>
+                <br>
+        	<li>The plan for this upcoming week is to get feedback from Mohammed regarding many aspects of our project--the user stories and requirements, the visualization tool, and the heatmap and tripartite graphs. We then want to iterate upon this feedback.</li>
+                <br>
+        	<li>N/A</li>
+        </ol>
+            <br>
+            <br>
+        </p>
+    </div>
     <script src="fall.js"></script>
 </body>
 </html>
