@@ -470,6 +470,152 @@
             <br>
         </p>
     </div>
+    <div class="lab-entry">
+        <h3 class="date">July 10</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I worked through a few of the Github Issues.
+            <br>
+            <br>
+	    <strong>Hours logged: </strong> 10:30am - 5:00pm
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">July 11</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            Discovered that sum of node contributions for CASet visualization do not sum up to the total CASet distance.
+            <br>
+            An interesting way to make contributions using our tool is to make our own discoveries about the distance measures using our own tool.
+            <br>
+            Only DISC and CASet union are represented in the visualization tool, not their intersection variants.
+            <br>
+            <br>
+            I spent today better understanding the source code for VECTr, specifically the areas pertaining to calculating CASet and DISC (union) distance. I made changes to certain areas
+            of the code to make it so that all the contributions on the nodes would sum up to the total distance for CASet and DISC. The goal of my learning the details of this code are essential
+            both because it will help be make better visualizations if I better understand the underlying process but also because I want to create a more descriptive explanation of each distance 
+            measure on the general_info page of our tool. I also then played around with our tool to see if I could make discoveries about CASet and DISC based off of our visualization. While not directly,
+            the visualization helped lead me down rabbit holes in terms of potential discoveries about these distance measures. It seems that our tool would definitely be helpful to a distance measures researcher. How many of those people are there though? I am partly trying to make discoveries because it could be lumped in as part of the contributions of the work we are doing with VECTr. 
+            <br>
+            I fixed a bug with the color legend when I made the change to using interpolateHCL.
+            <br>
+            <br>
+	    <strong>Hours logged: </strong> 11:00am - 3:00pm, 5:00pm - 8:00pm, 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">July 12</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            <br>
+            <br>
+	    <strong>Hours logged: 12:30am - 2:30am, 10:30am - 3:30pm, 7:00pm - 8:30pm</strong> 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">July 13</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        I created a design for the new front-end for VECTr; I used Figma to create it. Here's what the design looks like: 
+        <br>
+        <img src="images/new-vectr-figma.png" alt="A new design for VECTr">
+        <br>
+        I used the following resource that I will cite: <a href="https://www.flaticon.com/free-icons/upload" title="upload icons">Upload icons created by Ayub Irawan - Flaticon</a>
+        I also used this: <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by Icongeek26 - Flaticon</a>
+            <br>
+            <br>
+	    <strong>Hours logged: 11:00am - 4:30pm, 5:00pm - 7:00pm, 9:00pm - 10:00pm</strong> 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">July 14</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+            I spent most of my time implementing the new front-end for VECTr. I also 
+            was able to put plot directly into the tool, which was nice. However, now we
+            have a bunch of ugly code.
+            <br>
+            <br>
+	    <strong>Hours logged: 1:30am - 4:00am, 9:30am - 4:00pm</strong> 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">July 15</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        I spent some time working on porting our tripartite graph for parent-child over to d3.
+        Beyond what we had in plot, I also added further interactivity such as on-hover, it highlights
+        only things related to a specific mutation. All of this was done in the Observable, which
+        I've linked <a href="https://observablehq.com/d/5a5928a7eb1e57bd#cell-2701">here</a>
+            <br>
+            <br>
+	    <strong>Hours logged: 3:00am - 4:30am</strong> 
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">Week 4 Status Report</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        Questions:
+        <ol>
+        	<li>What did I hope to accomplish?</li>
+        	<li>What did I actually accomplish</li>
+        	<li>Why are (1) and (3) different?</li>
+        	<li>What is my plan for next week??</li>
+        	<li>What did I read this week?</li>
+        	<li>Questions?</li>
+        </ol>
+        Answers:
+        <ol>
+               <li>
+                  I was hoping to reflect further on the insights we gained from meeting with Mohammed last week. I also hoped to do a lot of programming and knock out many of the GitHub issues. 
+               </li>
+                <br>
+        	<li>
+			<ul>
+				<li>I worked on the revisions for ACM BCB (The paper got accepted! &#127881;)</li>
+				<li>Met with Eric to go over a bit about Mohammed's feedback, but largely waiting for a big meeting with the whole team to discuss things through.</li>
+				<li>Reviewed the code for CASet and DISC as it is implemented and encoded in our visualization, found some bugs and squashed them.</li>
+				<li>Implemented the new front-end</li>
+				<li>D3 version of the tripartite map</li>
+			</ul>
+                </li>
+                <br>
+        	<li>Reality vs expectations differed a bit this week because (1) The acceptance to ACM BCB, (2) I focused more on implementing the new front-end. While I still did a lot of coding, very few of the tasks I did were related to the GitHub issues. I think that implementing a new front-end could have been a GitHub issue, however, and will ultimately be more fruitful than many of the existing tasks that our on our list.</li>
+                <br>
+        	<li>The plan for this week is to finish implementation of the new front-end, complete the d3 porting of our plot visualizations, tackle for more Github Issues, and meet as a group to get oriented on the direction of VECTr. Also, submit the final ACM BCB draft.</li>
+                <br>
+        	<li>Do we want to prioritize comparing distance measures or comparing tumor evolutionary histories?</li>
+        </ol>
+            <br>
+            <br>
+        </p>
+    </div>
+    <div class="lab-entry">
+        <h3 class="date">Week 4 Status Report</h3>
+        <p ondrop="drop(event)" ondragover="allowDrop(event)" class="content">
+        Questions:
+        <ol>
+        	<li>What did I hope to accomplish?</li>
+        	<li>What did I actually accomplish</li>
+        	<li>Why are (1) and (2) different?</li>
+        	<li>What is my plan for next week??</li>
+        </ol>
+        Answers:
+        <ol>
+               <li>
+        	<li>The plan for this week was to finish implementation of the new front-end, complete the d3 porting of our plot visualizations, tackle for more Github Issues, and meet as a group to get oriented on the direction of VECTr. Also, submit the final ACM BCB draft.</li>
+                <br>
+        	<li>
+			<ul>
+				<li>I worked a ton on reading, rereading, rerunning experiments, etc. for the ACM final draft.</li>
+				<li>Met with the whole team to go over next steps in terms of ACM BCB poster abstract and implementation.</li>
+				<li>Largely completed porting the visualizations over to d3.</li>
+				<li>Refactored the source code.</li>
+			</ul>
+                </li>
+                <br>
+        	<li>Reality vs expectations differed a bit this week because (1) polishing a paper takes far more work than I anticipated. An experiment also needed rerunning and there was rewriting associated with that so that was a lot. Other than that, I'm happy with what was achieved in terms of porting the visualizations over to d3 and cleaning up the source code. We didn't tackle as many github tickets though, but I think we did the more pressing stuff anyways.</li>
+                <br>
+        	<li>The plan for this upcoming week is to iterate upon the poster abstract and also continue with fleshing out the implentation and refactoring of source code for the tool.</li>
+                <br>
+        </ol>
+            <br>
+            <br>
+        </p>
     <script src="fall.js"></script>
 </body>
 </html>
